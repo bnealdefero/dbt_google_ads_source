@@ -29,7 +29,10 @@ final as (
         lower(ad_network_type) as ad_network_type,
         clicks, 
         cost_micros / 1000000.0 as spend, 
-        impressions,
+        impressions
+        {% for metric in var('google_ads__campaign_stats_passthrough_metrics') %}
+        , {{ metric }}
+        {% endfor %}
         _fivetran_synced
     from fields
 
