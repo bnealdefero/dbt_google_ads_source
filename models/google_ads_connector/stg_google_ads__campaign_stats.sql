@@ -23,17 +23,17 @@ fields as (
 final as (
     
     select 
+        _fivetran_synced,
         id as campaign_id,
-        customer_id as account_id, 
+        customer_id as account_id,
         date as date_day,
         lower(ad_network_type) as ad_network_type,
-        clicks, 
-        cost_micros / 1000000.0 as spend, 
+        clicks,
+        cost_micros / 1000000.0 as spend,
         impressions
         {% for metric in var('google_ads__campaign_stats_passthrough_metrics') %}
         , {{ metric }}
         {% endfor %}
-        _fivetran_synced
     from fields
 
 )
