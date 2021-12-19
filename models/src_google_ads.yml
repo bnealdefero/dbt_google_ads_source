@@ -210,3 +210,5 @@ sources:
             description: "{{ doc('impressions') }}"
       - name: campaign_stats
         description: Each record represents the daily performance of a campaign in Google Ads.
+      - name: ad_group_stats
+        description: Each record represents the daily performance of an ad group in Google Ads.
