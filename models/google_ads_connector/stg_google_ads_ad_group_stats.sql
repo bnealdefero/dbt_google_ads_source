@@ -24,7 +24,8 @@ final as (
     
     select 
         _fivetran_synced,
-        id as campaign_id,
+        id,
+        campaign_id,
         customer_id as account_id,
         date as date_day,
         lower(ad_network_type) as ad_network_type,
