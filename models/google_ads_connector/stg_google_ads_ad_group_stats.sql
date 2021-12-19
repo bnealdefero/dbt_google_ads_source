@@ -10,13 +10,13 @@ with base as (
 fields as (
 
     select
-        {{
-            fivetran_utils.fill_staging_columns(
-                source_columns=adapter.get_columns_in_relation(ref('stg_google_ads__ad_group_stats_tmp')),
-                staging_columns=get_campaign_stats_columns()
-            )
-        }}
-        
+        -- {{
+        --     fivetran_utils.fill_staging_columns(
+        --         source_columns=adapter.get_columns_in_relation(ref('stg_google_ads__ad_group_stats_tmp')),
+        --         staging_columns=get_campaign_stats_columns()
+        --     )
+        -- }}
+        *
     from base
 ),
 
