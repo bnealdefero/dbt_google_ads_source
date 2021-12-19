@@ -14,11 +14,13 @@ vars:
   google_ads__campaign_history: "{{ source('adwords','campaign_history') }}"
   google_ads__account: "{{ source('adwords','account') }}"
   google_ads__campaign_stats: "{{ source('adwords','campaign_stats') }}"
+  google_ads__ad_group_stats: "{{ source('adwords','ad_group_stats') }}"
   api_source: adwords
   google_ads__url_passthrough_metrics: []
   google_ads__criteria_passthrough_metrics: []
   google_ads__ad_stats_passthrough_metrics: []
   google_ads__campaign_stats_passthrough_metrics: []
+  google_ads__ad_group_stats_passthrough_metrics: []
 
 models:
   google_ads_source:
