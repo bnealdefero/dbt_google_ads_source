@@ -9,6 +9,7 @@
     {"name": "active_view_measurable_impressions", "datatype": dbt_utils.type_int()},
     {"name": "active_view_viewability", "datatype": dbt_utils.type_float()},
     {"name": "ad_network_type", "datatype": dbt_utils.type_string()},
+    {"name": "advertising_channel_type", "datatype": dbt_utils.type_string()},
     {"name": "base_campaign", "datatype": dbt_utils.type_string()},
     {"name": "clicks", "datatype": dbt_utils.type_int()},
     {"name": "conversions", "datatype": dbt_utils.type_float()},
